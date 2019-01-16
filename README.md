@@ -14,9 +14,9 @@ The MLFQ scheduling policy operates according to the following rules:
 • The time slice increases by a factor 2 when moving from higher to lower priority (i.e., TSL-1 = 2 TSL).
 • The time slice at the highest priority level (TSHPL), the time allotment (TA) and the priority boost period S (all
 expressed in milliseconds) is configurable and defined in include/resched.h as follows:
-#define TIME_SLICE <TSHPL>
-#define TIME_ALLOTMENT <TA>
-#define PRIORITY_BOOST_PERIOD <S>
+  #define TIME_SLICE <TSHPL>
+  #define TIME_ALLOTMENT <TA>
+  #define PRIORITY_BOOST_PERIOD <S>
 • System processes are scheduled using TSHPL (e.g., the same time slice as highest priority user
 processes).
 2. Implemented the function
